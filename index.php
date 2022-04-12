@@ -1,3 +1,5 @@
+<!-- shows the header -->
+
 <?php
 get_header();
 ?>
@@ -10,10 +12,13 @@ get_header();
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="hero">
-								<img src="<?php echo get_template_directory_uri()."/img/city.jpg";?>" />
+								<!-- Shows the thumbnail image -->
+								<?php the_post_thumbnail(); ?>
 								<div class="text">
-									<h1>Hej och välkommen!</h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
+									<!-- Shows the title of the page -->
+									<h1><?php the_title(); ?></h1>
+									<!-- Shows the content of the page -->
+									<p><?php the_content(); ?></p>
 								</div>
 							</div>
 						</div>
@@ -25,6 +30,7 @@ get_header();
 
 
 
+<!-- Shows the footer -->
 
 <?php
 get_footer();
