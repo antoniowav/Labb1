@@ -1,3 +1,4 @@
+<!-- Shows the header -->
 <?php
 get_header();
 ?>
@@ -8,10 +9,14 @@ get_header();
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
 							<article>
+								<!-- Shows the post thumbnail image -->
                                 <?php the_post_thumbnail(); ?> 
+								<!-- Shows the post title -->
 								<h1 class="title"><?php the_title(); ?></h1>
 								<ul class="meta">
-									<li>
+									<li><!-- The time shows the date of publication 
+										The author shows who wrote the article
+										The category shows in which categories the post belongs -->
 										<i class="fa fa-calendar"></i> <?php the_time(get_option('date_format')); ?>
 									</li>
 									<li>
@@ -21,9 +26,14 @@ get_header();
 										<i class="fa fa-tag"></i> <a> <?php the_category(" , ", true, ""); ?> </a>
 									</li>
 								</ul>
-                                <p> <?php the_content(); ?> </p>
+								<!-- Showa the post content -->
+                                <p> <?php 
+										the_content();
+									?> 
+								</p>
 							</article>
 						</div>
+						<!-- Shows the sidebar -->
 						<?php get_sidebar("sidebar"); ?>
 					</div>
 				</div>
@@ -32,7 +42,7 @@ get_header();
 
 
 
-
+<!-- Shows the footer -->
 
 <?php
 get_footer();

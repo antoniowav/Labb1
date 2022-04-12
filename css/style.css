@@ -1,35 +1,11 @@
+/* Added by me */
 
-
-/* General styles
------------------------------------------------------------------- */
-
-* {
-	outline: none;
+.post-categories{
+	padding: 0;
 }
 
-body {
-	background-color: #eee;
-}
-
-a {
-	color: crimson;
-}
-
-	a:hover, a:active {
-		color: darkred;
-	}
-
-h1, h2, h3, h4 {
-	margin-top: 0;
-}
-
-h1 {
-	margin-bottom: 30px;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
+.wp-block-pages-list__item {
+	list-style: disc;
 }
 
 ul{
@@ -41,9 +17,15 @@ li{
 	list-style: none;
 }
 
-.post-categories{
-	padding: 0;
+.screen-reader-text{
+	margin-bottom: 5px;
+    position: relative;
+    clip-path: initial;
+    height: 30px;
+    overflow: auto;
+    width: auto;
 }
+
 
 #menu-navbar-menu-1{
 	padding: 0;
@@ -83,6 +65,41 @@ li{
 	list-style: none;
 	padding: 10px 0;
 	
+}
+
+
+
+
+/* General styles
+------------------------------------------------------------------ */
+
+* {
+	outline: none;
+}
+
+body {
+	background-color: #eee;
+}
+
+a {
+	color: crimson;
+}
+
+	a:hover, a:active {
+		color: darkred;
+	}
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -154,6 +171,15 @@ textarea {
 				color: white;
 				margin-left: 10px;
 			}
+
+@media ( max-width: 1200px ) {
+
+	.searchform-wrap input[type="text"] {
+		width: 100%;
+		padding: 0;
+		margin: 0
+	}
+}
 
 @media ( max-width: 768px ) {
 
@@ -532,7 +558,11 @@ article .meta {
 	background-color: #333;
 	color: white;
 	padding: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 
 	#footer a {
 		color: crimson;

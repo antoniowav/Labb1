@@ -1,3 +1,4 @@
+<!-- Shows the header -->
 <?php
 get_header();
 ?>
@@ -7,7 +8,8 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
-							<h1>Blogg</h1>
+							<!-- Shows the page name -->
+							<h1><?php echo wp_title(""); ?></h1>
 
 							<!-- Loop to show the posts on the page -->
 									<?php 
@@ -19,8 +21,11 @@ get_header();
 								<!-- Show thumbnail picture -->
 								<?php the_post_thumbnail(); ?> 
 								<h2 class="title">
-									<!-- The permalink makes the title clickable and send the user to singe.php -post page-
-										The title shows the title of the post -from the loop posts-	-->
+								<!-- The permalink makes the title clickable and send the user to singe.php -post page-
+										The title shows the title of the post -from the loop posts- 
+										The time shows the date of publication 
+										The author shows who wrote the article
+										The category shows in which categories the post belongs	-->
 									<a href=<?php the_permalink(); ?> > <?php the_title(); ?> </a>
 								</h2>
 								<ul class="meta">
@@ -36,10 +41,12 @@ get_header();
 								</ul>
 								
 								<p> 
+									<!-- The excerpt is used when we don't want to show the full text -content- but only a small part as preview -->
 									<?php the_excerpt( /* $more_link_text , $strip_teaser */ ); ?> 
 								</p>
 								
 							</article>
+							<!-- End of loop -->
 							<?php 
 								endwhile;
 								endif;
@@ -47,17 +54,18 @@ get_header();
 
 
 							<nav class="navigation pagination">
+								<!-- Show the page numbers -navigation- in case there are more than 3 posts -->
 								<?php echo paginate_links(); ?>
 							</nav>
 						</div>
-						
+						<!-- Shows the sidebar -->
 						<?php get_sidebar("sidebar"); ?>
 							
 					</div>
 				</div>
 			</section>
 		</main>
-
+<!-- Shows the footer -->
         <?php
 get_footer();
 ?>
